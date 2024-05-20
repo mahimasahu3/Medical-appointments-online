@@ -18,20 +18,18 @@ function Services(){
         paddingLeft:"200px",
         paddingRight:"200px",
         
-        backgroundColor:"#f9f9f9"
     }
     const child_div ={
         margin: "5px",        
-        border: "10px solid hsla(0,0%,100%,.5)",
-        backgroundColor: "#e3f2fd",
+        boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
         textAlign: "center",
-        borderRadius:"100"
+        borderRadius:"10px"
     }
     return(
         <div>
             
             <h4 style={{textAlign:"center"}}>Best Services</h4>
-            <p tyle={{textAlign:"center"}}>Love yourself enough to live a healthy lifestyle.</p>
+            <p style={{textAlign:"center"}}>Love yourself enough to live a healthy lifestyle.</p>
             
             <div style={parent_div}>
             <div style={child_div} >
