@@ -12,7 +12,7 @@ import './App.css';
 const App = () => {
     return (
         <div>
-          <div class="main-container">
+          <div className="main-container">
           <NavBar/>
           </div>
             
