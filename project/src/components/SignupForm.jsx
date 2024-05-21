@@ -23,7 +23,7 @@ const SignUpForm = () => {
 
     return (
         <div className="signup-form">
-            <h2>Sign Up</h2>
+            <h1>Sign Up</h1>
             <form onSubmit={handleSubmit}>
             <label>Role</label><br />
                 <select value={role} onChange={(e) => setRole(e.target.value)} className="input-field">

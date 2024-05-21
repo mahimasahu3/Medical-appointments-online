@@ -1,7 +1,7 @@
 /* SignUpForm.css */
 .signup-form {
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     
     margin-left: 600px;
     margin-right: 600px;
@@ -9,7 +9,7 @@
     background-color: #f0f0f0;
 }
 
-.signup-form h2 {
+.signup-form h1 {
     text-align: center;
 }
 
