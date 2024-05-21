@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
-    const [email, setEmail] = useState('Enter Your Email');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
@@ -20,8 +20,12 @@ const LoginForm = () => {
         borderRadius:"5px",
         backgroundColor:"#f0f0f0"
     }
+    const input_css={
+        width:"100%",
+        height:"25px"
+    }
     const submit_button = {
-        margin:"5px",
+       
         width: "100%",
         padding:"10px 15px",
         border:"none",
@@ -34,7 +38,7 @@ const LoginForm = () => {
     }
 
     const reset_button = {
-        margin:"5px",
+        marginTop:"10px",
         width: "100%",
         padding:"10px 15px",
         border:"none",
@@ -49,22 +53,22 @@ const LoginForm = () => {
     return (
         <form onSubmit={handleSubmit} style={login_css}>
             <h2 style={{textAlign:"center"}}>Login</h2>
-            <div><p>Are you a new member?<Link to="/signup" className="link">Sign Up</Link></p>
+            <div><p>Are you a new member?<Link to="/signup" className="link" style={{color:"blue"}}>Sign Up Here</Link></p>
             
             </div>
             <div>
                 <label>Email:</label><br/>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                <input type="email" style={input_css} value={email} onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div>
                 <label>Password:</label><br/>
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <input type="password" style={input_css} value={password} onChange={(e) => setPassword(e.target.value)} required />
             </div>
             <br/><br/>
             <button type="submit" style={submit_button}>Login</button><br/>
             <button type="reset" style={reset_button}>Reset</button>
             <br/><br/><br/>
-            <p>Forgor Password?</p>
+            <p style={{textAlign:"center"}}>Forgor Password?</p>
             
         </form>
     );
