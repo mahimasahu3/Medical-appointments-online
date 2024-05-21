@@ -21,11 +21,25 @@ const LoginForm = () => {
         backgroundColor:"#f0f0f0"
     }
     const submit_button = {
+        margin:"5px",
         width: "100%",
         padding:"10px 15px",
         border:"none",
         borderRadius:"5px",
-        backgroundColor:"#28a745", /* Example button color */
+        backgroundColor:"#0064bd", /* Example button color */
+        color: "white",
+        textAlign:"center",
+        cursor: "pointer",
+        fontSize: "16px"
+    }
+
+    const reset_button = {
+        margin:"5px",
+        width: "100%",
+        padding:"10px 15px",
+        border:"none",
+        borderRadius:"5px",
+        backgroundColor:"#e62143", /* Example button color */
         color: "white",
         textAlign:"center",
         cursor: "pointer",
@@ -48,7 +62,10 @@ const LoginForm = () => {
             </div>
             <br/><br/>
             <button type="submit" style={submit_button}>Login</button><br/>
-            <button type="reset">Reset</button>
+            <button type="reset" style={reset_button}>Reset</button>
+            <br/><br/><br/>
+            <p>Forgor Password?</p>
+            
         </form>
     );
 };
