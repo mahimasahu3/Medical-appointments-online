@@ -3,6 +3,9 @@ import Image1 from '../assets/Instant_Consultation.jpg';
 import Image2 from '../assets/Book_Appointment.jpg';
 import Image3 from '../assets/Self_Checkup.jpg';
 import Image4 from '../assets/Health_Tips.jpg';
+
+import { useNavigate } from 'react-router-dom';
+
 function Services(){
     
     const img_div={
@@ -25,6 +28,12 @@ function Services(){
         textAlign: "center",
         borderRadius:"10px"
     }
+
+    const navigate = useNavigate();
+
+    const handleGetStartedClick = () => {
+        navigate('/healthtips');
+    };
     return(
         <div>
             
@@ -44,7 +53,7 @@ function Services(){
                 <img src={Image3} alt="Self Checkup" style={img_div}/>
                 <p style={{fontWeight:"bold"}}>Self Checkup</p>
             </div>
-            <div style={child_div} >
+            <div style={child_div} onClick={handleGetStartedClick}>
                 <img src={Image4} alt="Health Tips and Guidance" style={img_div}/>
                 <p style={{fontWeight:"bold"}}>Health Tips and Guidance</p>
             </div>
