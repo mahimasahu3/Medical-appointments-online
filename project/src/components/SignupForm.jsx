@@ -1,71 +1,53 @@
 import React, { useState } from 'react';
-import '../style/SignUpForm.css';// Make sure to create this CSS file for styling
+import '../style/SignUpForm.css'; // Import the CSS file
 
-function SignUpForm() {
-    const [formData, setFormData] = useState({
-        role: '',
-        name: '',
-        phone: '',
-        email: '',
-        password: ''
-    });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
+const SignUpForm = () => {
+    const [role, setRole] = useState('');
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic
-        console.log('Form Data Submitted:', formData);
+        // Add your form submission logic here
     };
 
     const handleReset = () => {
-        setFormData({
-            role: '',
-            name: '',
-            phone: '',
-            email: '',
-            password: ''
-        });
+        setRole('');
+        setName('');
+        setPhone('');
+        setEmail('');
+        setPassword('');
     };
 
     return (
-        <form className="signup-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-                <label htmlFor="role">Role</label>
-                <select name="role" id="role" value={formData.role} onChange={handleChange} required>
+        <div className="signup-form">
+            <h2>Sign Up</h2>
+            <form onSubmit={handleSubmit}>
+            <label>Role</label><br />
+                <select value={role} onChange={(e) => setRole(e.target.value)} className="input-field">
                     <option value="">Select Role</option>
                     <option value="doctor">Doctor</option>
                     <option value="patient">Patient</option>
                 </select>
-            </div>
-            <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
-            </div>
-            <div className="form-group">
-                <label htmlFor="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
-            </div>
-            <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-            </div>
-            <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required />
-            </div>
-            <div className="form-buttons">
-                <button type="submit" className="btn btn-submit">Submit</button>
-                <button type="button" className="btn btn-reset" onClick={handleReset}>Reset</button>
-            </div>
-        </form>
+                <label>Name</label><br />
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" className="input-field" />
+                
+                <label>Phone</label><br />
+                <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone" className="input-field" />
+                
+                <label>Email</label><br />
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="input-field" />
+                
+                <label>Password</label><br />
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="input-field" />
+                
+                <button type="submit" className="submit-button">Submit</button>
+                <button type="button" onClick={handleReset} className="reset-button">Reset</button>
+            </form>
+        </div>
     );
-}
+};
 
 export default SignUpForm;
