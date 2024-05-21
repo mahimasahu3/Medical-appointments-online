@@ -1,8 +1,8 @@
 
-import Image1 from '../assests/Instant_Consultation.jpg';
-import Image2 from '../assests/Book_Appointment.jpg';
-import Image3 from '../assests/Self_Checkup.jpg';
-import Image4 from '../assests/Health_Tips.jpg';
+import Image1 from '../assets/Instant_Consultation.jpg';
+import Image2 from '../assets/Book_Appointment.jpg';
+import Image3 from '../assets/Self_Checkup.jpg';
+import Image4 from '../assets/Health_Tips.jpg';
 function Services(){
     
     const img_div={
