@@ -1,16 +1,13 @@
 .nav-container {
   justify-content: space-between;
   border-radius: 36px;
-  border: var(--rounded-box, 1px) solid #004957;
-  background-color: #2a3843;
   align-self: stretch;
   display: flex;
-  gap: 20px;
-  padding: 16px 32px;
+  padding: 16px;
 }
 
 .link {
-  color: #fff;
+  
   text-align: center;
   letter-spacing: 0.32px;
   font: 600 16px Poppins, sans-serif;

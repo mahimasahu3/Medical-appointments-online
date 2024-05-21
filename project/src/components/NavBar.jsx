@@ -5,7 +5,7 @@ function NavBar(){
         <div>
             <nav className="nav-container">
                <Link to="/">
-                    <img src={logo} alt="Logo"/>
+                    <img src={logo} alt="Logo" height="70px" width="70px"/>
                 </Link>
                 <Link to="/" className="link">Home</Link>
                 <Link to="/signup" className="link">Sign Up</Link>
