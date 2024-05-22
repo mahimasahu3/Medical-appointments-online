@@ -6,7 +6,8 @@ import Home from './components/Home';
 import Services from './components/Services';
 import NavBar from './components/NavBar';
 import './App.css';
-import Healthtips from './components/Health_Tips';
+import Healthtips from './components/Service/Health_Tips';
+import BookAppointment from './components/Service/BookAppointment';
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
                     <Route path="/login" element={<LoginForm/>} />
                     <Route path="/service" element={<Services/>} />
                     <Route path="/healthtips" element={<Healthtips/>} />
+                    <Route path="/bookappointment" element={<BookAppointment/>}/>
                 </Routes>
             </div>
     );

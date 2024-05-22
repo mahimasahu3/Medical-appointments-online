@@ -34,6 +34,9 @@ function Services(){
     const handleGetStartedClick = () => {
         navigate('/healthtips');
     };
+    const handleBookAppointmentClick = () => {
+        navigate('/bookappointment');
+    };
     return(
         <div>
             
@@ -45,7 +48,7 @@ function Services(){
                 <img src={Image1} alt="Instant Consultation" style={img_div}/>
                 <p style={{fontWeight:"bold"}}>Instant Consultation</p>
             </div>
-            <div style={child_div} >
+            <div style={child_div} onClick={handleBookAppointmentClick}>
                 <img src={Image2} alt="Book Appointment" style={img_div}/>
                 <p style={{fontWeight:"bold"}}>Book Appointment</p>
             </div>
