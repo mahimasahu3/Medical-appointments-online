@@ -1,7 +1,8 @@
 .container {
-    
+    text-align: center;
     margin-left: 300px;
     margin-right: 300px;
+   
 }
 
 .header {
@@ -24,8 +25,7 @@
 
 .search-input {
     padding: 8px;
-    margin-right:10px;
-    width: 100%;
+    width: 300px;
 }
 
 .search-icon {
