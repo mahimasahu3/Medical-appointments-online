@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
+import BA from '../../assets/BookAppointments.jpg';
+import '../../style/BookAppointment.css';  // Import the CSS file
 
-import BookAppointments from '../../assets/BookAppointments.jpg';
-
-
-function BookAppointment() {
+function Bookappointment() {
     const [searchTerm, setSearchTerm] = useState('');
     const [dropdownVisible, setDropdownVisible] = useState(false);
     const [filteredItems, setFilteredItems] = useState([]);
 
-    const items = ['Appointment 1', 'Appointment 2', 'Appointment 3', 'Appointment 4'];
+    const items = ['Dentist', 'Gynecologist/Obstetrician', 'General Physician','Dermatologist'];
 
     const handleSearchChange = (event) => {
         const value = event.target.value;
@@ -28,25 +28,25 @@ function BookAppointment() {
     };
 
     return (
-        <div>
-            <h1>Book an Appointment</h1>
-            <div style={{ position: 'relative', display: 'inline-block' }}>
-                <img src={BookAppointments} alt="icon" style={{ marginRight: '8px' }} />
+        <div className="container">
+            <h1 className="header">Find a doctor at your own ease</h1>
+            <div className="search-container">
+                <img src={BA} alt="icon" className="icon" /><br/>
                 <input
                     type="text"
-                    placeholder="Search.."
+                    placeholder="Search doctor by speciality"
                     value={searchTerm}
                     onChange={handleSearchChange}
-                    style={{ padding: '8px', width: '200px' }}
+                    className="search-input"
                 />
-                
+                <FaSearch className="search-icon" />
                 {dropdownVisible && (
-                    <ul style={{ position: 'absolute', top: '40px', left: '0', backgroundColor: 'white', listStyle: 'none', padding: '0', margin: '0', width: '200px', border: '1px solid #ccc', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
+                    <ul className="dropdown">
                         {filteredItems.map((item, index) => (
                             <li
                                 key={index}
                                 onClick={() => handleItemClick(item)}
-                                style={{ padding: '8px', cursor: 'pointer' }}
+                                className="dropdown-item"
                             >
                                 {item}
                             </li>
@@ -58,4 +58,4 @@ function BookAppointment() {
     );
 }
 
-export default BookAppointment;
+export default Bookappointment;
